@@ -1,38 +1,36 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-	private String title;
-	private List<Author> authors = null;
-	private List<Chapter> chapters;
-	public Book(String title) {
-		this.title=title;
+	
+	String titlu;
+	List<Author> a;
+	List<Chapter> c;
+	public Book(String titlu){
+		this.a = new ArrayList<>();
+		this.c = new ArrayList<>();
+		this.titlu = titlu;
 	}
 	
-	public Book(String title, List<Author> authors) {
-		this.title = title;
-		this.authors = authors;
+	public void addAuthor(Author a1){
+		a.add(a1);
 	}
 	
-	public Book(String title, List<Author> authors, List<Chapter> chapters) {
-		this.title = title;
-		this.authors = authors;
-		this.chapters = chapters;
+	public int createChapter(String chp){
+		Chapter c0 = new Chapter(chp);
+		c.add(c0);
+		return c.indexOf(c0);
 	}
 	
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
+	public Chapter getChapter(int indexChapter){
+		return c.get(indexChapter);
 	}
 	
-	public void addAuthor(Author author) {
-		authors.add(author);
-	}
-	
-	public int createChapter(String title) {
-		Chapter chapter = new Chapter(title);
-		chapters.add(chapter);
-		return chapters.indexOf(chapter);
+	public void print(){
+		System.out.println(titlu);
+		System.out.println("Authors: ");
+		for(Author auth:a){
+			auth.print(a);
+		}
 	}
 }
