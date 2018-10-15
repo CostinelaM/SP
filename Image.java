@@ -1,13 +1,14 @@
+import java.util.List;
 
 public class Image {
-	private String name;
-	public Image (String name) {
+	String name;
+	
+	public Image(String name){
 		this.name = name;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public void print(List<Image> i) {
+		// TODO Auto-generated method stub
+		System.out.println(name);
 	}
 }
