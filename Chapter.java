@@ -1,13 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Chapter {
-	private String chapterTitle;
-	public Chapter(String chapterTitle) {
-		this.chapterTitle=chapterTitle;
+
+	String titlu;
+	List<SubChapter>s;
+	public Chapter(String titlu){
+		this.s = new ArrayList<>();
+		this.titlu = titlu;
 	}
-	public String getChapterTitle() {
-		return chapterTitle;
+	
+	public int createSubChapter(String s0)
+	{
+		SubChapter s1 = new SubChapter(s0);
+		s.add(s1);
+		return s.indexOf(s1);
 	}
-	public void setChapterTitle(String chapterTitle) {
-		this.chapterTitle = chapterTitle;
+	
+	public SubChapter getSubChapter(int indexSubChapter)
+	{
+		return s.get(indexSubChapter);
 	}
 }
