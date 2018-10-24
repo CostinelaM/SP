@@ -1,7 +1,8 @@
-import java.util.List;
 
-public abstract class Element {
-	private List<Text> texts;
-	private List<Image> images;
-	private List<Table> tables;
+public interface Element {
+	public void add(Element e);
+	public void remove(Element e);
+	public void getChild(int index);
+	public void print();
+
 }

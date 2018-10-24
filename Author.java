@@ -1,15 +1,12 @@
-import java.util.List;
-
 public class Author {
-
-	String nume;
-	
-	public Author(String nume){
-		this.nume = nume;
+	public String name;
+	public Author(String name) {
+		this.name=name;
 	}
-
-	public void print(List<Author> a) {
-		// TODO Auto-generated method stub
-		System.out.println(nume);
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 }
